@@ -1,0 +1,123 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  font-family: 'Manrope', sans-serif;
+  color: #18191F;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: #E5E5E5 !important;
+}
+
+.container {
+  max-width: 1284px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+a {
+  color: #18191F !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  width: 60%;
+  margin-bottom: 40px;
+  h2 {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 800;
+  }
+}
+
+.feature-section {
+  padding: 50px 0;
+  background-color: #fff;
+  position: relative;
+
+  .news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+
+    .news-item {
+      img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      h5 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .news-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    width: 100%;
+
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  .news-container {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    width: 100%;
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  .news-container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 500px) {
+  .news-container {
+    grid-template-columns: 1fr !important;
+  }
+}
