@@ -5,7 +5,7 @@ export default class News extends Component {
 
   state = {
     newsPosts: [],
-    url: `https://newsapi.org/v2/everything?q=bitcoin&from=2020-12-22&sortBy=publishedAt&apiKey=${process.env.POST_API_KEY}`
+    url: `https://newsapi.org/v2/everything?q=bitcoin&from=2020-12-22&sortBy=publishedAt&apiKey=18be2e0e110d404286ce8381a6399372`
   }
 
   async getNews() {
