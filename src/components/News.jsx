@@ -5,16 +5,17 @@ export default class News extends Component {
 
   state = {
     newsPosts: [],
-    url: `https://newsapi.org/v2/everything?q=bitcoin&from=2020-12-21&sortBy=publishedAt&apiKey=${process.env.POST_API_KEY}`
+    url: `https://newsapi.org/v2/everything?q=bitcoin&from=2020-12-22&sortBy=publishedAt&apiKey=${process.env.POST_API_KEY}`
   }
 
   async getNews() {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
+      console.log(jsonData);
       this.setState({
         newsPosts: jsonData.articles,
-      })
+      });
     }
     catch (error) {
       console.log(error);
